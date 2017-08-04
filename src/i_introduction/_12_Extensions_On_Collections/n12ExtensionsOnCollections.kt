@@ -17,7 +17,15 @@ fun todoTask12(): Nothing = TODO(
 )
 
 fun task12(): List<Int> {
-    todoTask12()
-    return arrayListOf(1, 5, 2)
+    val arrayListOf = arrayListOf(1, 5, 2)
+    return arrayListOf.sortedDescending()
 }
 
+fun List<Int>.sortedDescending(): List<Int> {
+    val comparator = object :Comparator<Int> {
+        override fun compare(p0: Int, p1: Int): Int {
+            return p1 - p0
+        }
+    }
+    return sortedWith(comparator)
+}

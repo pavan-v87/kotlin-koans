@@ -25,5 +25,7 @@ fun todoTask0(): Nothing = TODO(
 )
 
 fun task0(): String {
-    return todoTask0()
+    return okFunc()
 }
+
+fun  okFunc(): String = "OK"
